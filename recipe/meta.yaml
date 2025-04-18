@@ -1,13 +1,13 @@
 {% set name = "yaqd-pololu" %}
-{% set version = "2023.12.0" %}
+{% set version = "2025.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/yaqd_pololu-{{ version }}.tar.gz
-  sha256: ff5a0e00b33b6c9c47f21a600f2bd00ff1b3c7575a006210d7ae336e4f082c01
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/yaqd_pololu-{{ version }}.tar.gz
+  sha256: 2908bf194066aceb8d036ec7a09aaa920411a2ac8348018a973232da37dc9357
 
 build:
   entry_points:
