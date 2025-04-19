@@ -14,15 +14,15 @@ build:
     - yaqd-pololu-ticcmd = yaqd_pololu._pololu_ticcmd:PololuTicCMD.main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - flit-core >=2,<4
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - yaqd-core >=2023.6.0
     - pyyaml
 
@@ -34,6 +34,7 @@ test:
     - yaqd-pololu-ticcmd --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://yaq.fyi
